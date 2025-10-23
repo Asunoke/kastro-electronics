@@ -1,3 +1,5 @@
+import path from 'path';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
@@ -6,6 +8,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  webpack: (config) => {
+    // Ajoute l'alias @ pour ton dossier racine
+    config.resolve.alias['@'] = path.resolve('./');
+    return config;
+  },
+};
 
-export default nextConfig
+export default nextConfig;
