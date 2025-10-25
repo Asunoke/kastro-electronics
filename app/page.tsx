@@ -7,13 +7,18 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
       <Header />
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <ContactSection />
+      <main className="min-h-screen">
+        <h1 className="sr-only">
+          Kastro Électroniques - Réparation de Téléphones et Appareils Électroniques à Bamako, Mali
+        </h1>
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <ContactSection />
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
